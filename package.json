@@ -1,0 +1,27 @@
+{
+  "name": "tarefa-modulo11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernandoBergamini/tarefa-modulo11.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FernandoBergamini/tarefa-modulo11/issues"
+  },
+  "homepage": "https://github.com/FernandoBergamini/tarefa-modulo11#readme",
+  "devDependencies": {
+    "cypress": "^10.8.0"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "faker": "^5.5.3"
+  }
+}
