@@ -4,7 +4,7 @@ var faker = require('faker')
 describe('funcionalidade de pre cadastro', () => {
 
 beforeEach(() => {
-    cy.visit ('http://lojaebac.ebaconline.art.br/minha-conta/')
+    cy.visit ('minha-conta/')
 });
 
 it('Deve completar o Pré Cadastro com Sucesso', () => {

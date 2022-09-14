@@ -1,9 +1,10 @@
 /// <reference types="cypress" />
+const perfil = require('../fixtures/perfil.json')
 
 context('Funcionalidade login', () => {
 
     beforeEach(() => {
-      cy.visit ('http://lojaebac.ebaconline.art.br/minha-conta/')
+      cy.visit ('minha-conta')
     });
   
     afterEach(() => {
@@ -19,6 +20,25 @@ context('Funcionalidade login', () => {
   
       
     });
+
+    it('Deve fazer login com sucesso - usando arquivo de dados', () => {
+       
+        cy.get('#username').type(perfil.usuario)
+        cy.get('#password').type(perfil.senha)
+        cy.get('.woocommerce-form > .button').click()
+        cy.get('.page-title').should('contain' , 'Minha conta')
+          
+     });
+
+     it.only('Deve fazer login com sucesso - usando fixture', () => {
+       
+        cy.get('#username').type(dados.usuario)
+        cy.get('#password').type(dados.senha, {log:false})
+        cy.get('.woocommerce-form > .button').click()
+        cy.get('.page-title').should('contain' , 'Minha conta')
+          
+     });
+  
   
     it('Deve exibir msg de erro ao inserir usuario invalidos', () => {
       
